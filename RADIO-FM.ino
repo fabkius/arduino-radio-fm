@@ -1,7 +1,3 @@
-/* How to use the TEA5767 FM radio Module with Arduino
-   More info: http://www.ardumotive.com/how-to-use-the-tea5767-fm-radio-module-en.html
-   Dev: Vasilakis Michalis // Date: 21/9/2015 // www.ardumotive.com    */
-
 //Libraries:
 #include <TEA5767.h>
 #include <Wire.h>
