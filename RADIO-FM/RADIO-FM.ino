@@ -99,7 +99,7 @@ void loop () {
 
 void findRadio(){
   
-    if (Radio.read_status(buf) == 1) {
+  if (Radio.read_status(buf) == 1) {
     current_freq =  floor (Radio.frequency_available (buf) / 100000 + .5) / 10;
     stereo = Radio.stereo(buf);
     signal_level = Radio.signal_level(buf);
@@ -138,43 +138,106 @@ int getPercent(int val){
 }
 
 void getVolumen(int value){
-  
-    lcd.setCursor(11,1); 
-    delay(500);
+
+    Serial.println(value);  
+    Serial.println("\n"); 
     
-   if(value > 0 && value < 55){
+    lcd.setCursor(11,1); 
+    delay(1000);
+    
+   if(value > 0 && value < 5){
     lcd.print("V: 0%"); 
-    delay(500);
-   }else if(value > 50 && value < 100){
-     lcd.print("V:10%"); 
-     delay(500);
-   }else if(value > 120 && value < 150){
+    
+   }else if(value > 10 && value < 15){
+     lcd.print("V: 2%"); 
+     
+   }else if(value > 20 && value < 25){
+     lcd.print("V: 5%"); 
+     
+   }else if(value > 30 && value < 35){
+     lcd.print("V: 8%");
+     
+   }else if(value > 40 && value < 45){
+     lcd.print("V:11%"); 
+     
+   }else if(value > 50 && value < 55){
+     lcd.print("V:14%"); 
+     
+   }else if(value > 60 && value < 65){
+     lcd.print("V:17%"); 
+      
+   }else if(value > 70 && value < 75){
      lcd.print("V:20%"); 
-     delay(500);
-   }else if(value > 170 && value < 200){
-     lcd.print("V:30%");
-     delay(500); 
-   }else if(value > 220 && value < 250){
-     lcd.print("V:40%"); 
-     delay(500);
-   }else if(value > 270 && value < 300){
+     
+   }else if(value > 80 && value < 85){
+     lcd.print("V:23%"); 
+     
+   }else if(value > 90 && value < 95){
+     lcd.print("V:26%");  
+     
+   }else if(value > 100 && value < 105){
+     lcd.print("V:29%"); 
+     
+   }else if(value > 110 && value < 115){
+    lcd.print("V:32%"); 
+    
+   }else if(value > 120 && value < 125){
+     lcd.print("V:35%"); 
+     
+   }else if(value > 130 && value < 135){
+     lcd.print("V:38%"); 
+     
+   }else if(value > 140 && value < 145){
+     lcd.print("V:41%");
+      
+   }else if(value > 150 && value < 155){
+     lcd.print("V:44%"); 
+     
+   }else if(value > 160 && value < 165){
+     lcd.print("V:47%"); 
+     
+   }else if(value > 170 && value < 175){
      lcd.print("V:50%"); 
-     delay(500);
-   }else if(value > 320 && value < 350){
-     lcd.print("V:60%"); 
-     delay(500); 
-   }else if(value > 350 && value < 400){
-     lcd.print("V:70%"); 
-     delay(500);
-   }else if(value > 420 && value < 450){
+     
+   }else if(value > 180 && value < 185){
+     lcd.print("V:53%"); 
+     
+   }else if(value > 190 && value < 195){
+     lcd.print("V:56%"); 
+     
+   }else if(value > 200 && value < 205){
+     lcd.print("V:59%");  
+     
+   }else if(value > 210 && value < 215){
+     lcd.print("V:62%"); 
+      
+   }else if(value > 220 && value < 225){
+    lcd.print("V:65%"); 
+    
+   }else if(value > 230 && value < 235){
+     lcd.print("V:68%"); 
+     
+   }else if(value > 240 && value < 245){
+     lcd.print("V:71%"); 
+     
+   }else if(value > 250 && value < 255){
+     lcd.print("V:74%");
+     
+   }else if(value > 260 && value < 265){
+     lcd.print("V:77%"); 
+     
+   }else if(value > 270 && value < 275){
      lcd.print("V:80%"); 
-     delay(500);
-   }else if(value > 470 && value < 500){
-     lcd.print("V:90%");  
-     delay(500);
-   }else if(value > 520 && value < 600){
+     
+   }else if(value > 280 && value < 285){
+     lcd.print("V:83%"); 
+      
+   }else if(value > 290 && value < 295){
+     lcd.print("V:86%"); 
+     
+   }else if(value > 300 && value < 999){
      lcd.print("V:MAX"); 
-     delay(500); 
+     
    }
   
 }
